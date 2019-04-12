@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../public/css/common.css">
+    <title>提现</title>
+    <style>
+        /* 返回键 */
+        .back {
+            width: 0.26rem;
+            height: 0.44rem;
+            position: absolute;
+            top: 0.6rem;
+            left: 0.24rem;
+        }
+
+        .withdrawCash {
+            width: 7.5rem;
+            height: 12.08rem;
+            display: block;
+            margin-top: 0.6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 返回键 -->
+    <!-- <img src="../public/images/back.png" alt="" class="back"> -->
+    <div class="jumper">
+        <img src="../public/images/withdrawCash.png" alt="" class="withdrawCash">
+    </div>
+    <script src="../public/js/jquery-2.1.1.min.js"></script>
+    <script src="../public/js/common.js"></script>
+    <script>
+        $('.jumper').click(function () {
+            window.location.href = '../index.html';
+        })
+    </script>
+</body>
+
+</html>

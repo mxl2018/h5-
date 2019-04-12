@@ -1,0 +1,618 @@
+
+.indexContainer {
+    width: 7.5rem;
+    /* height: 13.34rem; */
+    background-image: url('../images/hBg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.head {
+    width: 100%;
+    padding: 0.12rem 0.53rem 0 0.35rem;
+}
+
+/* 规则 */
+.ruleBox {
+    width: 6.62rem;
+    height: 3.52rem;
+    padding: 0.22rem 0 0 0.16rem;
+    font-size: 0.26rem;
+    color: #FFF0E2;
+    margin: 0 auto;
+    background-image: url('../images/title.png');
+    background-size: contain;
+}
+
+.rule {
+    width: 1.34rem;
+    height: 0.37rem;
+    border: 1px solid #FAD961;
+    /* border-image: linear-gradient(225deg, rgba(250, 217, 97, 1), rgba(255, 181, 140, 1)) 1 1; */
+    border-radius: 0.22rem;
+    font-size: 0.26rem;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    line-height: 0.37rem;
+}
+/* 一元提现动画 */
+@keyframes bounce-up {
+    20% {
+        transform: translateY(0.3rem);
+    }
+    40%{
+        transform: translateY(0);
+    }
+
+    55% {
+        transform: translateY(-0.3rem);
+    }
+    70%{
+        transform: translateY(0.1rem);
+    }
+    85%{
+        transform: translateY(0rem);
+    }
+    100%{
+        transform: translateY(-0.1rem);
+    }
+}
+.oneYuanActive{
+    animation: bounce-up 0.3s 1;
+}
+/* 奖品动画 */
+@keyframes big {
+    25%{
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.wardActive{
+    animation: big 0.3s 1;
+}
+@keyframes animated_div
+{
+    0% {
+        transform:  translate(0,0);
+    }
+    100% {
+        transform: translate(150px,-200px);
+    }
+}
+.flyImg{
+    width:0.5rem;
+    height:0.5rem;
+    position: absolute;
+    top:330px;
+    left:50%;
+    transform: translate(-50%);
+    z-index:10000;
+    margin:0 auto;
+    display: none;
+    animation: animated_div 1s 1;
+}
+/* .flyImgActive{
+    animation: animated_div 1s 1;
+    display: block;
+} */
+.oneYuan{
+    width: 0.76rem;
+    height: 0.77rem;
+    position: absolute;
+    top: 1.52rem;
+    right: 0;
+}
+.bottom{
+    position: absolute;
+    top: 1.15rem;
+    right: 0;
+}
+.oneYuan img {
+    width: 0.76rem;
+    height: 0.77rem;
+}
+
+.ward {
+    width: 0.77rem;
+    height: 0.74rem;
+    background: linear-gradient(178deg, rgba(138, 103, 255, 1) 0%, rgba(255, 114, 249, 1) 100%);
+    border-radius: 0.1rem 0px 0px 0.1rem;
+    padding-top: 0.07rem;
+    text-align: center;
+    font-size: 0.24rem;
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 130px;
+    right: 0;
+}
+
+.ward img {
+    width: 0.39rem;
+    height: 0.36rem;
+    margin: 0 auto;
+}
+
+/* 抽奖 */
+#lottery {
+    width: 7.48rem;
+    height: 6.63rem;
+    animation: bgChange 1s linear infinite;
+    margin: 0 auto;
+    padding-top: 0.85rem;
+    background: url(../images/zhuanpanOne.png);
+    background-position: 0 -0.35rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#lottery.shanDeng {
+    background: url(../images/zhuanpanTwo.png);
+    background-position: 0 -0.35rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#lottery ul {
+    width: 4.72rem;
+    height: 4.72rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.lottery-unit,.startButton{
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #FF0101;
+    font-size: 0.24rem;
+    text-align: center;
+    border-radius: 0.3rem;
+    background-image: url('../images/choujiangBg.png');
+    background-size: contain;
+    overflow: hidden;
+    position: absolute;
+}
+
+.lottery-unit-0 {
+    top: 0;
+    left: 0;
+}
+
+.lottery-unit-1 {
+    top: 0;
+    left: 1.61rem;
+}
+
+.lottery-unit-2 {
+    top: 0;
+    right: 0;
+}
+
+.lottery-unit-3 {
+    top: 1.61rem;
+    right: 0;
+}
+
+.lottery-unit-4 {
+    bottom: 0;
+    right: 0;
+}
+
+.lottery-unit-5 {
+    bottom: 0;
+    right: 1.61rem;
+}
+
+.lottery-unit-6 {
+    bottom: 0;
+    left: 0;
+}
+
+.lottery-unit-7 {
+    bottom: 1.61rem;
+    left: 0;
+}
+
+.startButton{
+    top: 1.61rem;
+    left: 1.61rem;
+}
+
+/* .active::after,
+.startButtonGray::after,
+.lottery-unit::after {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.3rem;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+.active::after,
+.startButtonGray::after,
+.wardGray::after {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.3rem;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.startButtonGray::after{
+    background: rgba(52, 52, 52, 0.5);
+}
+.wardGray::after {
+    background: rgba(52, 52, 52, 0.5);
+}
+/* 添加类名active选中奖品高亮 */
+.active::after {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.3rem;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(52, 52, 52, 0);
+}
+
+.lottery-unit>div {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+    background-image: url('../images/choujiangBg.png');
+    background-size: contain;
+    background-position: -0.27rem -0.27rem;
+    text-align: left;
+    padding: 0.15rem 0 0.15rem 0.22rem;
+}
+
+.lottery-unit>div img {
+    margin-left: 0.05rem;
+}
+
+.lottery-unit:nth-child(1) {
+    font-size: 0.24rem;
+}
+.startButton>div {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+    background-size: contain;
+    background-position: -0.27rem -0.27rem;
+    text-align: left;
+    padding: 0.15rem 0 0.15rem 0.22rem;
+    background-image: url('../images/choujiang.png');
+    padding: 0.3rem 0 0.15rem 0.3rem;
+}
+
+.startButton,
+.lottery-unit:nth-child(5) {
+    font-size: 0.38rem;
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+    color: rgba(255, 1, 1, 1);
+    line-height: 0.53rem;
+    letter-spacing: 0.06rem;
+    text-shadow: 0 0.02rem 0.04rem rgba(223, 129, 27, 0.5), 0.01rem 0.01rem 0 rgba(254, 255, 223, 0.53);
+}
+.lottery-unit:nth-child(5)>div {
+    padding: 0.3rem 0 0.15rem 0.3rem;
+}
+
+.lottery-unit:nth-child(4) {
+    font-size: 0.22rem;
+}
+
+.lottery-unit:nth-child(4)>div {
+    padding: 0.15rem 0 0.15rem 0;
+}
+
+.lottery-unit:nth-child(4)>div img {
+    margin-left: 0.25rem;
+}
+
+.lottery-unit img {
+    width: 0.94rem;
+    height: 0.94rem;
+}
+.startButton img{
+    width: 0.94rem;
+    height: 0.94rem;
+}
+.remain {
+    width: 100%;
+    height: 0.56rem;
+    margin: 0.4rem 0 0.3rem 0;
+    text-align: center;
+    font-size: 0.36rem;
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+    color: rgba(255, 203, 148, 1);
+    line-height: 0.5rem;
+    letter-spacing: 0.01rem;
+    text-shadow: 0 0.04rem 0.26rem rgba(165, 25, 2, 1);
+    position: relative;
+}
+#remainNum{
+    color:#F2FFAA;
+    font-size: 0.48rem;
+}
+.wujiaoxing {
+    width: 0.5rem;
+    height: 1rem;
+    position: absolute;
+    top: -0.5rem;
+    left: 4.7rem;
+}
+
+.loopNews {
+    margin-bottom: 0.59rem;
+}
+
+.newsBox {
+    width: 5.4rem;
+    height: 0.56rem;
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 0 0.25rem 0 rgba(255, 235, 176, 0.2);
+    border-radius: 0.28rem;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 0.56rem;
+    color: #FFFFFF;
+    font-size: 0.24rem;
+    overflow: hidden;
+}
+
+.newsBox span {
+    color: #FFCB94;
+    font-size: 0.26rem;
+}
+
+/* 解释说明 */
+.explain {
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 0.24rem;
+    padding-left: 1.2rem;
+    padding-bottom: 0.35rem;
+}
+
+.fish {
+    width: 1.67rem;
+    height: 1.84rem;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0;
+}
+
+/* 遮罩层 */
+.wardModel,
+.ruleModel {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.17rem 0.71rem 0 0.65rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.wardModel {
+    display: none;
+    padding: 0;
+}
+
+.fishWard {
+    padding-top: 0.3rem;
+    display: none;
+}
+
+.ruleTitle {
+    color: #FFFFFF;
+    font-size: 0.42rem;
+    text-align: center;
+    margin-bottom: 0.64rem;
+}
+
+#wrapper {
+    width: 6.14rem;
+    height: 6.17rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+#wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.wardExplain {
+    color: #FFFFFF;
+    font-size: 0.28rem;
+    line-height: 0.4rem;
+    font-size: 0.28rem;
+}
+
+.ruleContent {
+    margin-bottom: 0.7rem;
+}
+
+.wardList {
+    margin-top: 0.7rem;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.close,
+.wardClose {
+    width: 0.63rem;
+    height: 0.63rem;
+    margin: 1.72rem auto 0;
+    border-radius: 50%;
+}
+
+/* 奖励弹窗 */
+/* 动画 */
+@-webkit-keyframes loadRotate {
+    from {
+        -webkit-transform: rotateZ(0deg);
+    }
+
+    to {
+        -webkit-transform: rotateZ(360deg);
+    }
+}
+
+@keyframes loadRotate {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/* 按钮放大缩小动画 */
+@keyframes scaleDraw {
+
+    /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+    0% {
+        transform: scale(1);
+        /*开始为原始大小*/
+    }
+
+    25% {
+        transform: scale(1.5);
+        /*放大1.1倍*/
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.5);
+    }
+}
+
+.wardTanchuang {
+    width: 6.8rem;
+    height: 6.37rem;
+    margin: 3rem auto 0;
+    padding-top: 0.3rem;
+    background-image: url('../images/Fill 1_looper.png');
+    background-size: contain;
+    position: relative;
+}
+
+.aura {
+    width: 6.8rem;
+    height: 6.8rem;
+    -webkit-animation: loadRotate 10s linear infinite;
+    -webkit-animation-fill-mode: both;
+    animation: loadRotate 10s linear infinite;
+    position: absolute;
+    top: -50%;
+    z-index: -1;
+}
+
+.tanchaungFish {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -1.4rem;
+    z-index: 999;
+}
+
+.getWard {
+    width: 2.4rem;
+    height: 1.04rem;
+    margin: 0 auto;
+}
+
+.BitmapTop {
+    width: 1.37rem;
+    height: 1.99rem;
+    position: absolute;
+    top: -0.6rem;
+    left: 0;
+}
+
+/* 广告banner */
+.ggBanner {
+    width: 6.28rem;
+    height: 2rem;
+    border-radius: 0.2rem;
+    margin: 0.4rem auto 0.34rem;
+    background-color: white;
+}
+
+.wardTanchuang span {
+    color: #FFFFFF;
+    font-size: 0.34rem;
+    padding-left: 1.27rem;
+}
+
+.getButton {
+    width: 2.5rem;
+    height: 1.2rem;
+    margin: 0.45rem auto 0;
+    animation: scaleDraw 1.5s linear infinite;
+}
+
+.BitmapBottom {
+    width: 1.34rem;
+    height: 1.99rem;
+    position: absolute;
+    bottom: -0.8rem;
+    right: 0.2rem;
+}
+
+.wardClose {
+    margin: 0.57rem auto 0;
+}
+
+/* 很遗憾没有中奖弹窗样式类名*/
+.noWard {
+    color: #FFFFFF;
+    font-size: 0.3rem;
+    text-align: center;
+    margin-bottom: 0.45rem;
+    display:none;
+}
+
+.noWard>div {
+    margin-bottom: 0.3rem;
+}
+
+.noWard>img {
+    width: 4.46rem;
+    height: 0.77rem;
+    margin: 0 auto;
+}
+.noChance {
+    width: 4.04rem;
+    height: 0.5rem;
+    margin: 0 auto;
+    color: #FFFFFF;
+    font-size: 0.48rem;
+    text-align: center;
+    margin-bottom: 0.4rem;
+    display:none;
+}

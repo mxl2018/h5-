@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/css/choujiang.css" />
+    <!-- <link rel="stylesheet" href=""> -->
+    <link rel="stylesheet" href="./public/css/common.css" />
+    <link rel="stylesheet" href="./public/css/index.css" />
+    <style>
+      /* @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {}
+
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {}
+
+    @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {} */
+    </style>
+  </head>
+  <script language="javascript">
+    // 页面一加载指定跳转位置
+    window.location = "#bottom"; //自动跳转到锚点处
+  </script>
+
+  <body>
+    <div class="indexContainer">
+      <!-- 规则说明 -->
+      <div class="head">
+        <div class="ruleBox">
+          <div class="rule">游戏规则</div>
+          <div class="oneYuan oneyuanIcon">
+            <img src="./public/images/oneyuan.png" alt="" />
+          </div>
+          <div class="ward">
+            <img
+              src="./public/images/centuryIcon.png"
+              alt=""
+              class="centuryIcon"
+            />
+            <span>奖品</span>
+          </div>
+        </div>
+      </div>
+      <!-- 抽奖 -->
+      <div id="lottery">
+        <ul class="clearfix">
+          <li class="lottery-unit lottery-unit-0 iphone_bg">
+            <div>
+              <img src="./public/images/iphone.png" alt="" />
+              <span>Iphonex</span>
+            </div>
+          </li>
+          <li class="lottery-unit lottery-unit-1  twoBai_bg">
+            <div>
+              <img src="./public/images/twoCebturyIcon.png" alt="" />
+              <span>200元话费</span>
+            </div>
+          </li>
+          <li class="lottery-unit lottery-unit-2  free_bg">
+            <div>
+              <img src="./public/images/jinli.png" alt="" />
+              <span>免单锦鲤</span>
+            </div>
+          </li>
+          <li class="lottery-unit lottery-unit-3 earPhone_bg">
+            <div>
+              <img src="./public/images/erJi.png" alt="" />
+              <span>索尼蓝牙耳机</span>
+            </div>
+          </li>
+          <li class="lottery-unit lottery-unit-4">
+            <div>
+              <div>谢谢</div>
+              参与
+            </div>
+          </li>
+          <li class="lottery-unit lottery-unit-5 one_bg">
+            <div>
+              <img src="./public/images/centuryIcon.png" alt="" />
+              <span>1元红包</span>
+            </div>
+          </li>
+          <li class="lottery-unit lottery-unit-6 oneBai_bg">
+            <div>
+              <img src="./public/images/centuryIcon.png" alt="" />
+              <span>100元红包</span>
+            </div>
+          </li>
+          <li class="lottery-unit lottery-unit-7 chuifengji_bg">
+            <div>
+              <img src="./public/images/chuiFengJi.png" alt="" />
+              <span>戴森吹风机</span>
+            </div>
+          </li>
+          <li class="startButton" id="start">
+            <div>
+              <div>立即</div>
+              抽奖
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- 剩余次数 -->
+      <div class="remain">
+        <img src="./public/images/wujiaoxing.png" alt="" class="wujiaoxing" />
+        <div>您今天还可以再抽<span id="remainNum"> 8 </span>次</div>
+      </div>
+      <!-- 轮播新闻 -->
+      <div class="loopNews">
+        <div class="newsBox">
+          <ul id="myul">
+            <li>中奖快讯：158****0857 <span>1元现金红包</span></li>
+            <li>中奖快讯：186****5757 <span>1元现金红包</span></li>
+            <li>中奖快讯：134****8389 <span>5元现金红包</span></li>
+            <li>中奖快讯：183****3189 <span>1元现金红包</span></li>
+            <li>中奖快讯：159****8120 <span>5元现金红包</span></li>
+            <li>中奖快讯：187****9959 <span>1元现金红包</span></li>
+            <li>中奖快讯：157****7387 <span>1元现金红包</span></li>
+            <li>中奖快讯：186****2184 <span>1元现金红包</span></li>
+            <li>中奖快讯：186****1510 <span>1元现金红包</span></li>
+            <li>中奖快讯：156****9248 <span>1元现金红包</span></li>
+            <li>中奖快讯：170****5906 <span>5元现金红包</span></li>
+            <li>中奖快讯：139****6173 <span>获免单锦鲤</span></li>
+            <li>中奖快讯：131****0071 <span>获免单锦鲤</span></li>
+            <li>中奖快讯：188****5913 <span>获免单锦鲤</span></li>
+            <li>中奖快讯：139****3096 <span>获免单锦鲤</span></li>
+            <li>中奖快讯：156****2360 <span>获免单锦鲤</span></li>
+            <li>中奖快讯：131****9806 <span>获免单锦鲤</span></li>
+            <li>中奖快讯：157****7405 <span>获免单锦鲤</span></li>
+            <li>中奖快讯：188****8311 <span>获免单锦鲤</span></li>
+            <li>中奖快讯：150****2713 <span>获免单锦鲤</span></li>
+          </ul>
+        </div>
+      </div>
+      <!-- 页面一加载指定跳转位置 -->
+      <a name="bottom" class="bottom"></a>
+      <!-- 说明 -->
+      <div class="explain">*本活动奖品和设备生产商Apple Inc. 公司无关</div>
+      <!-- 锦鲤鱼 -->
+      <img src="./public/images/fish.png" alt="" class="fish" />
+      <img src="./public/images/centuryIcon.png" alt="" class="flyImg" />
+    </div>
+    <!-- 规则遮罩层 -->
+    <div class="ruleModel">
+      <h1 class="ruleTitle">活动说明</h1>
+      <div class="swiper">
+        <div id="wrapper">
+          <div class="wardExplain">
+            <div class="ruleContent">
+              <div>
+                限时狂欢，好礼送不停！参与抽奖活动，有机会获得现金红包、苹果手机、蓝牙耳机等奖品，本活动为概率中奖，祝好运！每天有8次免费抽奖机会。
+              </div>
+              <div class="wardList">
+                <ul>
+                  <li>奖品说明：</li>
+                  <li>大转盘内含奖品：</li>
+                  <li>iPhone X，共2份，中奖概率0.01%</li>
+                  <li>666元现金红包，共1份，中奖概率0.05%</li>
+                  <li>200元话费，共5份，中奖概率0.1%</li>
+                  <li>戴森吹风机，共1份，中奖概率0.01%</li>
+                  <li>1元红包，共10份，中奖概率0.05%</li>
+                  <li>索尼蓝牙耳机，共1份，中奖概率0.01%</li>
+                </ul>
+              </div>
+            </div>
+            <div class="divide">
+              <ul>
+                <li>-----------</li>
+                <li>重要声明：</li>
+                <li>
+                  1. 实物类奖品将在活动结束后5-10个工作日安排发货，请耐心等待
+                </li>
+                <li>2. 优惠券类奖品的使用规则详见每个优惠券的介绍页</li>
+                <li>3. 通过非法途径获得奖品的，主办方有权不提供奖品</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./public/images/close.png" alt="" class="close" />
+    </div>
+    <!-- 奖励弹窗 -->
+    <div class="wardModel">
+      <div class="wardTanchuang">
+        <!-- 鱼和中奖的图片 -->
+        <div class="fishWard">
+          <img src="./public/images/getWard.png" alt="" class="getWard" />
+          <img src="./public/images/fish.png" alt="" class="tanchaungFish" />
+        </div>
+        <!-- 没有中奖样式 -->
+        <div class="noWard">
+          <div>很遗憾，没有中奖</div>
+          <img src="./public/images/joinMore.png" alt="" />
+        </div>
+        <!-- 抽奖次数用完样式 -->
+        <div class="noChance">
+          <img src="./public/images/noChance.png" alt="" />
+        </div>
+        <img src="./public/images/Bitmap.png" alt="" class="aura" />
+        <img src="./public/images/BitmapTop.png" alt="" class="BitmapTop" />
+        <!-- 广告banner -->
+        <img src="./public/images/juxing.png" alt="" class="ggBanner" />
+        <span>玩小鱼赚钱，注册白拿5元钱</span>
+        <img src="./public/images/button.png" alt="" class="getButton" />
+        <img
+          src="./public/images/BitmapBottom.png"
+          alt=""
+          class="BitmapBottom"
+        />
+      </div>
+      <img src="./public/images/close.png" alt="" class="close wardClose" />
+    </div>
+    <script src="./public/js/jquery-2.1.1.min.js"></script>
+    <script src="./public/js/common.js"></script>
+    <script type="text/javascript">
+      // 抽奖点击次数
+      // 页面一加载移除奖品上的遮罩层
+      var clickCount = 0;
+      // 抽中奖品的index
+      var globalIndex;
+      // 展示模态框
+      $(".rule").click(function() {
+        $(".ruleModel").show();
+      });
+      // 关闭规则模态框
+      $(".close").click(function() {
+        $(".ruleModel").hide();
+      });
+      // 跳转至提现页面
+      $(".oneYuan").click(function() {
+        window.location.href = "./modules/withdrawCash.html";
+      });
+      // 跳转至我的奖品页面
+      $(".ward").click(function() {
+        window.location.href = "./modules/myPrize.html";
+      });
+      // 关闭奖励弹窗
+      $(".wardClose").click(function() {
+        setTimeout(function() {
+          $(".wardModel").hide();
+          $(".startButton").removeClass("startButtonGray");
+          // console.log(globalIndex)
+          $("#lottery")
+            .find(".lottery-unit-" + globalIndex)
+            .removeClass("active");
+        }, 200);
+        $(".oneYuan").addClass("oneYuanActive");
+        if (clickCount == 5 || clickCount >= 8) {
+          // 不做奖品飞升
+        } else {
+          $(".flyImg").css("display", "block");
+          setTimeout(function() {
+            $(".flyImg").fadeOut();
+          }, 900);
+        }
+      });
+      // 弹窗里的banner跳到广告主页面
+      $('.ggBanner').click(function(){
+         window.location.href = "./modules/withdrawCash.html";
+      })
+      //  弹窗里的立即领取跳到广告主页面
+      $('.getButton').click(function(){
+         window.location.href = "./modules/withdrawCash.html";
+      })
+      // 闪灯效果
+      var num = 0;
+      setInterval(function() {
+        num++;
+        if (num % 2 == 0) {
+          $("#lottery").addClass("shanDeng");
+        } else {
+          $("#lottery").removeClass("shanDeng");
+        }
+      }, 500);
+      // 新闻轮播
+      var time = setInterval(function() {
+        t();
+      }, 3000);
+
+      function t() {
+        var he = $(".newsBox>ul>li").height(); //找到li高
+        $(".newsBox>ul").animate(
+          {
+            marginTop: "-" + he
+          },
+          500,
+          function() {
+            $(".newsBox>ul>li")
+              .eq(0)
+              .appendTo($(".newsBox>ul")); //复制第一个到最后一个
+            $(".newsBox>ul").css({
+              marginTop: 0
+            });
+          }
+        );
+      }
+      // 抽奖
+      // 抽奖次数
+      var lottery = {
+        index: -1, //当前转动到哪个位置，起点位置
+        count: 8, //总共有多少个奖品位置，9宫格就是8个奖品位置
+        timer: 0, //setTimeout的ID，用clearTimeout清除
+        speed: 10, //初始转动速度
+        times: 0, //转动次数
+        cycle: 30, //转动基本次数：即至少需要转动多少次再进入抽奖环节
+        prize: 0, //默认中奖位置，放默认奖品
+        init: function(id) {
+          if ($("#" + id).find(".lottery-unit").length > 0) {
+            $lottery = $("#" + id);
+            $units = $lottery.find(".lottery-unit");
+            this.obj = $lottery;
+            this.count = $units.length;
+            $lottery.find(".lottery-unit-" + this.index).addClass("active");
+          }
+        },
+        roll: function() {
+          var index = this.index;
+          var count = this.count;
+          var lottery = this.obj;
+          $(lottery)
+            .find(".lottery-unit-" + index)
+            .removeClass("active");
+          index += 1;
+          if (index > count - 1) {
+            index = 0;
+          }
+          $(lottery)
+            .find(".lottery-unit-" + index)
+            .addClass("active");
+          this.index = index;
+          globalIndex = index;
+          // console.log(globalIndex)
+          return false;
+        },
+        stop: function(index) {
+          this.prize = index;
+          return false;
+        }
+      };
+      var click1 = false;
+
+      function roll() {
+        lottery.times += 1;
+        lottery.roll();
+
+        if (
+          lottery.times > lottery.cycle + 10 &&
+          lottery.prize == lottery.index
+        ) {
+          clearTimeout(lottery.timer);
+          lottery.times = 0;
+          click1 = false;
+          //显示中奖信息
+          showDetail();
+        } else {
+          //速度控制
+          if (lottery.times < lottery.cycle) {
+            lottery.speed -= 10;
+          } else if (lottery.times == lottery.cycle) {
+            index = lottery.prize;
+          } else {
+            if (
+              lottery.times > lottery.cycle + 10 &&
+              ((lottery.prize == 0 && lottery.index == 7) ||
+                lottery.prize == lottery.index + 1)
+            ) {
+              lottery.speed += 110;
+            } else {
+              lottery.speed += 20;
+            }
+          }
+          if (lottery.speed < 40) {
+            lottery.speed = 40;
+          }
+          //延时递归调用
+          lottery.timer = setTimeout(roll, lottery.speed);
+        }
+
+        return false;
+      }
+
+      function doRoll() {
+        if (clickCount == 5 || clickCount == 8) {
+          lottery.prize = 4;
+        } else {
+          lottery.prize = 2;
+        }
+        lottery.speed = 100;
+        roll();
+        click1 = true;
+        return false;
+      }
+      //显示中奖信息
+      function showDetail() {
+        if (clickCount == 5 || clickCount == 8) {
+          $(".wardModel").show();
+          $(".noWard").css("display", "block");
+          $(".fishWard").css("display", "none");
+          $(".noChance").css("display", "none");
+        } else {
+          $(".wardModel").show();
+          $(".noWard").css("display", "none");
+          $(".fishWard").css("display", "block");
+          $(".noChance").css("display", "none");
+        }
+      }
+      window.onload = function() {
+        lottery.init("lottery");
+        $("#start").click(function() {
+          $(".lottery-unit").addClass("wardGray");
+          $(".startButton").addClass("startButtonGray");
+          $(".oneYuan").removeClass("oneYuanActive");
+          $(".flyImg").removeClass("flyImgActive");
+          if (click1) {
+            return false;
+          } else {
+            clickCount++;
+            lottery.speed = 100;
+            click = true; //一次抽奖完成后，设置click为true，可继续抽奖
+            var pageCount = 8 - clickCount;
+            $("#remainNum").text(pageCount);
+            if (clickCount > 8) {
+              // 8次抽奖机会用完弹出本次抽奖机会已用完
+              pageCount = 0;
+              $("#remainNum").text(pageCount);
+              $(".wardModel").show();
+              $(".noWard").css("display", "none");
+              $(".fishWard").css("display", "none");
+              $(".noChance").css("display", "block");
+              $(".lottery-unit").removeClass("active");
+              return false;
+            }
+            doRoll();
+          }
+        });
+      };
+    </script>
+  </body>
+</html>
