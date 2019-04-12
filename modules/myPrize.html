@@ -5,21 +5,8 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>我的奖品</title>
-    <link rel="stylesheet" href="../public/css/reset.css">
+    <link rel="stylesheet" href="../public/css/common.css">
     <link rel="stylesheet" href="../public/css/myPrize.css">
-    <style>
-        /* 返回键 */
-        .back {
-            width: 0.26rem;
-            height: 0.44rem;
-            position: absolute;
-            top: 0.6rem;
-            left: 0.24rem;
-        }
-        .myPrize{
-            margin-top: 1.2rem;
-        }
-    </style>
 </head>
 
 <body>
@@ -27,27 +14,26 @@
     <!-- <img src="../public/images/back.png" alt="" class="back"> -->
     <div class="myPrize">
         <ul class="prize_list">
-            <li class="list_item">
-                <div class="item_pic"><img src="../public/images/prize_item.png" alt=""></div>
-                <div class="item_info">
+            <li class="list_item clearfix">
+                <div class="item_pic fl"><img src="../public/images/prize_item.png" alt=""></div>
+                <div class="item_info fl">
                     <div class="item_name"> 高额金卡限时抢</div>
                     <div class="item_time">2019-03-19</div>
                 </div>
-                <div class="item_click">查看</div>
+                <div class="item_click fr">查看</div>
             </li>
-            <li class="list_item">
-                <div class="item_pic"><img src="../public/images/prize_item.png" alt=""></div>
-                <div class="item_info">
+            <li class="list_item clearfix">
+                <div class="item_pic fl"><img src="../public/images/prize_item.png" alt=""></div>
+                <div class="item_info fl">
                     <div class="item_name"> 高额金卡限时抢</div>
                     <div class="item_time">2019-03-19</div>
                 </div>
-                <div class="item_click">查看</div>
+                <div class="item_click fr">查看</div>
             </li>
         </ul>
     </div>
     <script src="../public/js/jquery-2.1.1.min.js"></script>
     <script src="../public/js/common.js"></script>
-    <script src="../public/js/flexible.js"></script>
     <script>
         $('.list_item').click(function () {
             window.location.href = '../index.html';
